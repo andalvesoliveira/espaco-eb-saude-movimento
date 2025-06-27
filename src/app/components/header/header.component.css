@@ -1,0 +1,26 @@
+.navbar {
+  padding: 1rem 0;
+}
+
+.navbar-brand h1 {
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  color: var(--dark-gray);
+  font-weight: 500;
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--dark-green);
+  background-color: rgba(177, 211, 196, 0.1);
+}
+
+.nav-link.active {
+  color: var(--dark-green);
+  font-weight: 600;
+}

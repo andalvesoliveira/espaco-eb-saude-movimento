@@ -1,0 +1,20 @@
+.table {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.table thead th {
+  background-color: var(--dark-green);
+  color: white;
+  border: none;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: rgba(198, 215, 214, 0.3);
+}
+
+.badge {
+  padding: 0.5rem 0.75rem;
+  font-weight: 500;
+  border-radius: 50px;
+}

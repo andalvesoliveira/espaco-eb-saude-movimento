@@ -1,0 +1,49 @@
+<section class="py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="card border-0 shadow-sm">
+          <div class="card-body p-4 p-md-5">
+            <h2 class="text-center mb-4 fw-bold">Agendamento</h2>
+            <form [formGroup]="schedulingForm" (ngSubmit)="onSubmit()">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="service" class="form-label">Serviço</label>
+                  <select class="form-select" id="service" formControlName="service" required>
+                    <option value="">Selecione um serviço</option>
+                    <option *ngFor="let service of services" [value]="service.id">{{ service.name }}</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label for="professional" class="form-label">Profissional</label>
+                  <select class="form-select" id="professional" formControlName="professional" required>
+                    <option value="">Selecione um profissional</option>
+                    <option *ngFor="let prof of professionals" [value]="prof.id">{{ prof.name }}</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label for="date" class="form-label">Data</label>
+                  <input type="date" class="form-control" id="date" formControlName="date" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="time" class="form-label">Horário</label>
+                  <select class="form-select" id="time" formControlName="time" required>
+                    <option value="">Selecione um horário</option>
+                    <option *ngFor="let time of availableTimes" [value]="time">{{ time }}</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label for="notes" class="form-label">Observações</label>
+                  <textarea class="form-control" id="notes" rows="3" formControlName="notes"></textarea>
+                </div>
+                <div class="col-12 mt-4">
+                  <button type="submit" class="btn btn-primary w-100 py-2" [disabled]="!schedulingForm.valid">Confirmar Agendamento</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

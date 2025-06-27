@@ -1,0 +1,11 @@
+.card-img-top {
+  height: 250px;
+  object-fit: cover;
+}
+
+.badge {
+  background-color: var(--dark-green) !important;
+  color: white;
+  padding: 0.5rem 0.75rem;
+  font-weight: 500;
+}

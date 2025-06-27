@@ -1,0 +1,32 @@
+<section class="py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="card border-0 shadow-sm">
+          <div class="card-body p-4 p-md-5">
+            <h2 class="text-center mb-4 fw-bold">Cancelamento de Agendamento</h2>
+            <form [formGroup]="cancelForm" (ngSubmit)="onSubmit()">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="email" class="form-label">E-mail</label>
+                  <input type="email" class="form-control" id="email" formControlName="email" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="appointmentId" class="form-label">Código do Agendamento</label>
+                  <input type="text" class="form-control" id="appointmentId" formControlName="appointmentId" required>
+                </div>
+                <div class="col-12">
+                  <label for="reason" class="form-label">Motivo do Cancelamento</label>
+                  <textarea class="form-control" id="reason" rows="3" formControlName="reason" required></textarea>
+                </div>
+                <div class="col-12 mt-4">
+                  <button type="submit" class="btn btn-danger w-100 py-2" [disabled]="!cancelForm.valid">Confirmar Cancelamento</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

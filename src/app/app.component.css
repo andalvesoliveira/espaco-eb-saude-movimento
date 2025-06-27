@@ -1,0 +1,43 @@
+:root {
+  --dark-green: #b1d3c4;
+  --gray-blue: #c6d7d6;
+  --dark-gray: #3c3c3c;
+  --light-gray: #f8f9fa;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--dark-gray);
+  background-color: var(--light-gray);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.btn-primary {
+  background-color: var(--dark-green);
+  border-color: var(--dark-green);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #9abfb1;
+  border-color: #9abfb1;
+}
+
+.btn-secondary {
+  background-color: var(--gray-blue);
+  border-color: var(--gray-blue);
+  color: var(--dark-gray);
+}
+
+.btn-secondary:hover {
+  background-color: #b5c6c5;
+  border-color: #b5c6c5;
+}
